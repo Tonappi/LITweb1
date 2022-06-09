@@ -1,0 +1,236 @@
+/*リセットCSS*/
+*{
+    margin: 0;
+    padding:0; 
+    font-family: 'Noto Sans JP';
+    list-style: none;
+}
+/*文字サイズ指定*/
+html { 
+  font-size: 62.5%; 
+}
+h2{
+  font-size: 4rem;
+  font-weight: bold;
+}
+h3{
+  font-size: 2.4rem;
+  font-weight:bold;
+}
+/*ファーストビュー*/
+.top {
+  position:relative;
+  background-color:#fffef9;
+  width:100vw;
+  height:130vh;
+}
+
+.firstview img{
+  position:absolute;
+  top:15%;
+  left:40%;
+}
+.top h1 {
+  position:absolute;
+  left:7.6%;
+  top:40%;
+  font-size: 9.6rem; 
+  font-weight: bold;
+}
+.top p {
+  position:absolute;
+  left:7.6%;
+  top:70%;
+  font-size: 2rem; 
+  font-weight: bold;
+  z-index: 1;  
+}
+
+
+/*aboutのセクション*/
+.about{
+  background-color: #ffffff;
+  width:100vw;
+  height:130vh;
+}
+.profile{
+  display:flex;
+  justify-content: space-around;
+}
+.profile_text{
+  position: relative;
+  display:block;
+}
+.profile_text h2{
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  
+}
+.profile_text p{
+  font-size:2rem;
+  width:41.8rem;
+  line-height:3;
+  
+}
+.profile_pictuire {
+  position:relative;
+ 
+}
+.profile_picture img{
+  width: 100%;
+}
+.profile_picture p{
+  position:absolute;
+  top: 50%;
+  font-size: 6.4rem;
+  font-weight: bold;
+  color: #DB2B1A;
+}
+
+/*TEDxTalkのセクション*/
+.tedxtalk{
+  width:100vw;
+  height: 130vh;
+  background-color:#fffef9;
+}
+
+
+.tedxtalk_content h2{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.tedxtalk_content p{
+  font-size: 2rem;
+  line-height:1.5;
+  margin:0 auto;
+  width:50%;
+
+} 
+.tedxtalk h3{
+  text-align: center;
+  margin-top:1%;
+  margin-bottom: 1%;
+}
+
+.targets{
+  width:85%;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.target{
+  width:28%;
+  height: 60%;
+  border: 0.3rem solid #DB2B1A;
+  text-align:center;
+  overflow: hidden;
+  
+}
+.target p{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom:5%;
+}
+.target img{
+  object-fit: cover;
+  width: 90%;
+  height:70%;
+}
+
+/*eventのセクション*/
+.event{
+  width:100vw;
+  height: 130vh;
+}
+.event h2{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+}
+.event_video{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right:8%;
+  margin-left: 8%;
+}
+.event_contents{
+  display:block;
+  width:50%;
+}
+.event_content{
+  
+}
+.event_content h3{
+  font-size:2.4rem;
+  line-height: 2;
+  text-align: center;
+}
+.event_content p{
+  font-size: 2rem;
+  line-height: 1.5;
+  width:50%;
+  margin: 0 auto;
+}
+/*楽しみ方のセクション*/
+.howtoenjoy{
+  width:100vw;
+  height:130vh;
+  background-color:#fffef9;
+}
+.howtoenjoy h2{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.howtoenjoy_contents{
+  display:flex;
+  justify-content: space-between;
+  margin-left:8%;
+  margin-right:8%;
+}
+.howtoenjoy_content{
+  width:40%;
+  height:70%; 
+  text-align: center;
+}
+.howtoenjoy_content h3{
+  font-size: 2.4rem;
+  text-align: center;
+  padding-bottom:6%;
+  
+}
+.howtoenjoy_content p{
+  width:90%; 
+  font-size: 2rem;
+  line-height: 1.5;
+  margin:0 auto;
+  padding-bottom: 3%;
+}
+
+/*ボタンのホバー*/
+.btn_flat{
+  display:inline-block;
+  padding:1rem 1rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color:#ff7950;
+  border: solid 0.2rem #ff7950;
+  border-radius: 1rem;
+  transition: .4s;
+}
+.btn_flat:hover{
+  background:#ff7950;
+  color:#ffffff;
+}
+
+
+
+
+
+
+
+
