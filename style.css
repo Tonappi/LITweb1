@@ -17,17 +17,57 @@ h3{
   font-size: 2.4rem;
   font-weight:bold;
 }
+
+
+/*header*/
+header{
+  height:12vh;
+  width:100vw;
+  line-height: 12vh;
+  background-color:rgba(255,255,255,0.8);
+  position: fixed;
+  top:0;
+  z-index: 8;
+}
+header ul{
+  background-color: rgba(255,255,255,0.8);
+  width:65%;
+  height: 100%;
+  padding-left: 30%;
+  display:flex;
+  justify-content: space-between;
+  
+}
+
+header a{
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #000000;
+  text-decoration:none;  
+}
+header a :hover{
+  border-bottom: #ff7950;
+}
 /*ファーストビュー*/
 .top {
   position:relative;
   background-color:#fffef9;
-  width:100vw;
+  
   height:130vh;
 }
 
-.firstview img{
+.firstview_main_image{
   position:absolute;
+  width:60%;
   top:15%;
+  left:40%;
+}
+
+
+.four_triangle_image{
+  position:absolute;
+  width:30%;
+  top:55%;
   left:40%;
 }
 .top h1 {
@@ -37,82 +77,125 @@ h3{
   font-size: 9.6rem; 
   font-weight: bold;
 }
-.top p {
+.top p{
   position:absolute;
   left:7.6%;
   top:70%;
   font-size: 2rem; 
   font-weight: bold;
   z-index: 1;  
+  line-height: 1.5;
 }
+
 
 
 /*aboutのセクション*/
 .about{
   background-color: #ffffff;
-  width:100vw;
+ 
   height:130vh;
+
 }
 .profile{
+  margin-left:10%;
+  margin-right:6%;
+  margin-top:10%;
+  margin-bottom: 10%;
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  
 }
 .profile_text{
-  position: relative;
   display:block;
+  width:40%;
+  padding-top:10%;
+  margin-right:5%;
+  
 }
 .profile_text h2{
+  width:70%;
   font-size: 4rem;
   font-weight: bold;
+  margin:0 auto;
   text-align: center;
+  border-bottom: solid 0.3rem #000000;
+  border-top: solid 0.3rem #000000;
   
 }
 .profile_text p{
+  margin-top:20%;
   font-size:2rem;
-  width:41.8rem;
-  line-height:3;
+  width:100%;
+  line-height:2;
   
 }
-.profile_pictuire {
+.fadein{
+  width:60%;
+  height:100vh;
+  margin-top:-5%;
   position:relative;
- 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 2s;
 }
-.profile_picture img{
+.fadein img{
   width: 100%;
-}
-.profile_picture p{
   position:absolute;
-  top: 50%;
+  left:0;
+  top:0;
+
+
+}
+.fadein p{
   font-size: 6.4rem;
   font-weight: bold;
   color: #DB2B1A;
+  position:absolute;
+  z-index:7;
+  text-align: center;
+  left:25%;
+  top:40%;
+ 
 }
+/*スクロールでフワっと表示*/
+.fadein{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+  
+  
+
 
 /*TEDxTalkのセクション*/
 .tedxtalk{
-  width:100vw;
+  padding-top:10%;
+  padding-bottom: 10%;
   height: 130vh;
   background-color:#fffef9;
 }
 
 
 .tedxtalk_content h2{
+  margin:0 auto;
+  width:40%; 
+  margin-bottom:8%;
   text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  border-bottom: solid 0.3rem #000000;
+  border-top: solid 0.3rem #000000;
 }
 
 .tedxtalk_content p{
   font-size: 2rem;
-  line-height:1.5;
+  line-height:2;
   margin:0 auto;
   width:50%;
 
 } 
 .tedxtalk h3{
   text-align: center;
-  margin-top:1%;
-  margin-bottom: 1%;
+  padding-top:5%;
+  padding-bottom: 5%;
 }
 
 .targets{
@@ -137,60 +220,89 @@ h3{
 .target img{
   object-fit: cover;
   width: 90%;
-  height:70%;
+  height:60%;
 }
 
 /*eventのセクション*/
 .event{
-  width:100vw;
+  padding-top:10%;
+  padding-bottom: 15%;
   height: 130vh;
 }
 .event h2{
-  padding-top: 5%;
-  padding-bottom: 5%;
+  margin:0 auto;
+  width:40%; 
   text-align: center;
+  border-bottom: solid 0.3rem #000000;
+  border-top: solid 0.3rem #000000;
 }
 .event_video{
   display:flex;
   justify-content: space-between;
   align-items: center;
   margin-right:8%;
-  margin-left: 8%;
+  margin-left: 10%;
+  margin-top:5%;
 }
+.video_content{
+  width: 60%;
+  position:relative;  
+}
+.video_contents{
+  padding-right: 5%;
+  padding-left: 3%;
+}
+
+
+
+
+
+
+
 .event_contents{
   display:block;
   width:50%;
+  height:80%;
+  margin-left:-5%;
+  
 }
 .event_content{
-  
+  width:100%;
 }
 .event_content h3{
   font-size:2.4rem;
-  line-height: 2;
+  line-height: 1.8;
   text-align: center;
+  margin-top:10%;
+  margin-bottom: 2%;
 }
 .event_content p{
   font-size: 2rem;
-  line-height: 1.5;
-  width:50%;
+  line-height: 2;
+  width:70%;
   margin: 0 auto;
+  
 }
 /*楽しみ方のセクション*/
 .howtoenjoy{
-  width:100vw;
+  padding-top:10%;
+  padding-bottom: 10%;
   height:130vh;
   background-color:#fffef9;
 }
 .howtoenjoy h2{
+  margin:0 auto;
+  width:40%; 
   text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  border-bottom: solid 0.3rem #000000;
+  border-top: solid 0.3rem #000000;
 }
 .howtoenjoy_contents{
   display:flex;
   justify-content: space-between;
   margin-left:8%;
   margin-right:8%;
+  margin-top:10%;
 }
 .howtoenjoy_content{
   width:40%;
@@ -207,13 +319,23 @@ h3{
   width:90%; 
   font-size: 2rem;
   line-height: 1.5;
+  text-align:start;
+  
   margin:0 auto;
-  padding-bottom: 3%;
+  line-height: 2;
+}
+.howtoenjoy_content img{
+  object-fit: contain;
+  height: 50%;
+  margin-top: 10%;
+
+  
 }
 
 /*ボタンのホバー*/
 .btn_flat{
   display:inline-block;
+  width:60%;
   padding:1rem 1rem;
   text-decoration: none;
   font-size: 1.6rem;
@@ -221,10 +343,20 @@ h3{
   border: solid 0.2rem #ff7950;
   border-radius: 1rem;
   transition: .4s;
+  margin-top:10%;
+  margin-bottom: 5%;
 }
 .btn_flat:hover{
   background:#ff7950;
   color:#ffffff;
+}
+/*footer*/
+footer{
+  height:10vh;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 10vh;
 }
 
 
