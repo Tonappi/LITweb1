@@ -21,7 +21,7 @@ h3{
 
 /*header*/
 header{
-  height:13vh;
+  height:12vh;
   width:100vw;
   line-height: 12vh;
   background-color:rgba(255, 255, 255, 0.8);
@@ -64,43 +64,50 @@ ul a:hover::after {
   opacity: 1;
   visibility: visible;
 }
-/*ファーストビュー*/
+/*トップページ*/
 .top {
   position:relative;
   background-color:#fffef9;
-  
-  height:130vh;
+  height:110vh;
 }
 
 .firstview_main_image{
   position:absolute;
-  width:60%;
-  top:15%;
+  width:54%;
+  top:8%;
   left:40%;
 }
-
-
-.four_triangle_image{
+.four_triangle_image_1{
   position:absolute;
-  width:30%;
-  top:55%;
-  left:40%;
+  width:16%;
+  top:48%;
+  left:42%;
 }
+
+
+.four_triangle_image_2{
+  position:absolute;
+  width:16%;
+  top:56%;
+  left:35%;
+  transform: rotateZ(180deg);
+}
+
 .top h1 {
   position:absolute;
-  left:7.6%;
-  top:40%;
-  font-size: 9.6rem; 
+  left:12%;
+  top:33%;
+  font-size: 8.5rem; 
   font-weight: bold;
 }
 .top p{
   position:absolute;
   left:7.6%;
-  top:70%;
-  font-size: 2rem; 
+  top:64%;
+  font-size: 1.8rem; 
   font-weight: bold;
   z-index: 1;  
-  line-height: 1.5;
+  line-height: 2;
 }
 
 
@@ -126,22 +133,24 @@ ul a:hover::after {
   width:40%;
   padding-top:10%;
   margin-right:5%;
+  padding-left:3%;
   
 }
 .profile_text h2{
-  width:70%;
+  width:55%;
   font-size: 4rem;
   font-weight: bold;
   margin:0 auto;
   text-align: center;
   border-bottom: solid 0.3rem #000000;
   border-top: solid 0.3rem #000000;
+  letter-spacing:0.1em;
   
 }
 .profile_text p{
   margin-top:20%;
-  font-size:2rem;
-  width:100%;
+  font-size:1.8rem;
+  width:99%;
   line-height:2;
   
 }
@@ -155,22 +164,22 @@ ul a:hover::after {
   transition: all 2s;
 }
 .fadein img{
-  width: 100%;
+  width: 104%;
   position:absolute;
-  left:0;
+  left:4%;
   top:0;
 
 
 }
 .fadein p{
-  font-size: 6.4rem;
+  font-size: 6rem;
   font-weight: bold;
   color: #DB2B1A;
   position:absolute;
   z-index:7;
   text-align: center;
-  left:25%;
-  top:40%;
+  left:30%;
+  top:44%;
  
 }
 /*スクロールでフワっと表示*/
@@ -194,31 +203,60 @@ ul a:hover::after {
 
 .tedxtalk_content h2{
   margin:0 auto;
-  width:40%; 
+  width:25%; 
   margin-bottom:8%;
+  letter-spacing:0.1em;
   text-align: center;
   border-bottom: solid 0.3rem #000000;
   border-top: solid 0.3rem #000000;
 }
 
 .tedxtalk_content p{
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height:2;
   margin:0 auto;
-  width:50%;
+  width:40%;
 
 } 
-.tedxtalk h3{
+.slash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom:6%;
+  margin-top:6%;
+}
+ 
+.slash::before,
+.slash::after {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background-color: #000;
+  margin: 0px 4px 4px;
+}
+ 
+.slash::before {
+  transform: rotate(45deg);
+}
+ 
+.slash::after {
+  transform: rotate(-45deg);
+}
+.slash h3{
   text-align: center;
-  padding-top:5%;
-  padding-bottom: 5%;
+  padding-top:10%;
+  padding-bottom: 10%;
+  
 }
 
+
 .targets{
-  width:85%;
+  width:76%;
   margin:0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  
 }
 .target{
   width:28%;
@@ -229,7 +267,7 @@ ul a:hover::after {
   
 }
 .target p{
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
   margin-bottom:5%;
 }
@@ -247,8 +285,9 @@ ul a:hover::after {
 }
 .event h2{
   margin:0 auto;
-  width:40%; 
+  width:25%; 
   text-align: center;
+  letter-spacing:0.1em;
   border-bottom: solid 0.3rem #000000;
   border-top: solid 0.3rem #000000;
 }
@@ -263,26 +302,28 @@ ul a:hover::after {
   margin-top:5%;
 }
 .video_content{
-  width: 60%;
+  width: 67%;
   padding-right:5%;
+  margin-top:-14%;
   position:relative;  
 }
 .video_contents{
   padding-right: 5%;
   padding-left: 3%;
+  
 }
 .movie_decoration_1 img{
-  width:300px;
+  width:50%;
   position:absolute;
-  left:55%;
-  top:-36%;
+  left:50%;
+  top:-37%;
   z-index:-1;
 }
 .movie_decoration_2 img{
-  width:330px;
+  width:50%;
   position: absolute;
   left:-10%;
-  top:76%;
+  top:70%;
   z-index:-1;
 }
 
@@ -308,7 +349,7 @@ ul a:hover::after {
   margin-bottom: 2%;
 }
 .event_content p{
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 2;
   width:70%;
   margin: 0 auto;
@@ -323,7 +364,8 @@ ul a:hover::after {
 }
 .howtoenjoy h2{
   margin:0 auto;
-  width:40%; 
+  width:25%;
+  letter-spacing:0.1em; 
   text-align: center;
   border-bottom: solid 0.3rem #000000;
   border-top: solid 0.3rem #000000;
@@ -331,8 +373,8 @@ ul a:hover::after {
 .howtoenjoy_contents{
   display:flex;
   justify-content: space-between;
-  margin-left:8%;
-  margin-right:8%;
+  margin-left:12%;
+  margin-right:12%;
   margin-top:10%;
 }
 .howtoenjoy_content{
@@ -348,10 +390,8 @@ ul a:hover::after {
 }
 .howtoenjoy_content p{
   width:90%; 
-  font-size: 2rem;
-  line-height: 1.5;
+  font-size: 1.8rem;
   text-align:start;
-  
   margin:0 auto;
   line-height: 2;
 }
@@ -367,11 +407,11 @@ ul a:hover::after {
 .btn_flat{
   display:inline-block;
   width:60%;
-  padding:1rem 1rem;
+  padding:2rem 2rem;
   text-decoration: none;
   font-size: 1.6rem;
   color:#ff7950;
-  border: solid 0.2rem #ff7950;
+  border: solid 0.3rem #ff7950;
   border-radius: 1rem;
   transition: .4s;
   margin-top:10%;
@@ -388,6 +428,74 @@ footer{
   font-size: 2rem;
   font-weight: bold;
   line-height: 10vh;
+}
+/*ここまで全てに共通のスタイル*/
+
+/*ここからスマホ用のスタイル*/
+@media all and (max-width:480px){
+
+
+  html { 
+    font-size: 30%; 
+  }
+  /*トップページ*/
+  .top{
+    padding-left:0;
+  }
+
+
+    /*TEDxTalkのセクション*/
+  .tedxtalk{
+  padding-top:10%;
+  padding-bottom: 10%;
+  height: 100vh;
+  background-color:#fffef9;
+  display:block;
+}
+  .tedxtalk_content{
+    width:90%;
+    margin:0 auto;
+    margin-top: 20%;
+  }
+  .tedxtalk_content h2{
+    width:60%;
+    margin-bottom: 20%;
+  }
+  .tedxtalk_content p{
+    width:76%;
+    font-size: 2.6rem;
+
+  }
+
+  .targets{
+    width:88%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .target{
+    width:28%;
+    height: 60%;
+    border: 0.3rem solid #DB2B1A;
+    text-align:center;
+    overflow: hidden;
+    
+  }
+  .target p{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom:5%;
+  }
+  .target img{
+    object-fit: cover;
+    width: 90%;
+    height:60%;
+  }
+  
+  /*eventのセクション*/
+  /*楽しみ方のセクション*/
+
 }
 
 
