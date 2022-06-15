@@ -472,7 +472,7 @@ footer{
     display: block;
     position:absolute;
     top:5%;
-    left:85%;
+    left:80%;
     width: 8rem;
     height: 6rem;
     z-index: 100;
@@ -669,20 +669,19 @@ footer{
   }
 
   .targets{
-    width:90%;
-    margin:0 auto;
+    width:85%;
     flex-wrap: wrap;
-    align-content: space-between;
+   align-content: stretch;
+    row-gap:20px;
     
-   
     
     
   }
   .target_1,.target_2,.target_3{
-    width:40%;
+    width:46%;
     height: 100%;
-    margin-top:5%;
-
+    margin-top:0;
+   
   }
   
   .target_1 p,.target_2 p,.target_3 p{
