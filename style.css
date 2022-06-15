@@ -582,7 +582,7 @@ footer{
   /*aboutのセクション*/
   .about{
     background-color: #ffffff;
-    height:110vh;
+    height:130vh;
   }
   .profile{
     height:100%;
@@ -649,7 +649,7 @@ footer{
   .tedxtalk{
     padding-top:10%;
     padding-bottom: 10%;
-    height: 110vh;
+    height: 130vh;
     padding-left:3%;
     padding-right:3%;
     background-color:#fffef9;
@@ -698,7 +698,7 @@ footer{
   
   /*eventのセクション*/
   .event {
-    height:110vh;
+    height:130vh;
     position: relative;
   }
   .event h2{
@@ -785,7 +785,7 @@ footer{
  
   /*楽しみ方のセクション*/
 .howtoenjoy{
-  height:110vh;
+  height:130vh;
 }
 .howtoenjoy h2{
   width:60%;
