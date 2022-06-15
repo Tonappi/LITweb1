@@ -24,13 +24,13 @@ header{
   height:12vh;
   width:100vw;
   line-height: 12vh;
-  background-color:rgba(255, 255, 255, 0.8);
+  background-color:rgba(255, 255, 255,0.8);
   position: fixed;
   top:0;
   z-index: 8;
 }
 header ul{
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255,0.8);
   width:65%;
   height: 100%;
   padding-left: 30%;
@@ -54,7 +54,7 @@ ul a::after {
   content: '';
   width: 100%;
   height: 0.1rem;
-  background:#ff7950;
+  background:#000000;
   opacity: 0;
   visibility: hidden;
   transition: .3s;
@@ -64,6 +64,14 @@ ul a:hover::after {
   opacity: 1;
   visibility: visible;
 }
+
+/* PCでは非表示にしておく */
+.nav_toggle,
+.nav {
+  display: none;
+}
+
+
 /*トップページ*/
 .top {
   position:relative;
@@ -108,6 +116,12 @@ ul a:hover::after {
   font-weight: bold;
   z-index: 1;  
   line-height: 2;
+}
+.br-sp{
+  display:none;
+}
+.br-both{
+  display:block;
 }
 
 
@@ -160,8 +174,8 @@ ul a:hover::after {
   margin-top:-5%;
   position:relative;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 2s;
+  transform: translateY(10px);
+  transition: all 3s;
 }
 .fadein img{
   width: 104%;
@@ -185,8 +199,8 @@ ul a:hover::after {
 /*スクロールでフワっと表示*/
 .fadein{
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s;
+  transform: translateY(10px);
+  transition: all 4s;
 }
   
   
@@ -258,7 +272,7 @@ ul a:hover::after {
   justify-content: space-between;
   
 }
-.target{
+.target_1,.target_2,.target_3{
   width:28%;
   height: 60%;
   border: 0.3rem solid #DB2B1A;
@@ -266,12 +280,12 @@ ul a:hover::after {
   overflow: hidden;
   
 }
-.target p{
+.target_1 p,.target_2 p,.target_3 p{
   font-size: 1.8rem;
   text-align: center;
   margin-bottom:5%;
 }
-.target img{
+.target_1 img,.target_2 img,.target_3 img{
   object-fit: cover;
   width: 90%;
   height:60%;
@@ -432,30 +446,217 @@ footer{
 /*ここまで全てに共通のスタイル*/
 
 /*ここからスマホ用のスタイル*/
+
 @media all and (max-width:480px){
 
 
   html { 
     font-size: 30%; 
   }
+  h2{
+    font-size: 5rem;
+  }
+  
+  /*ヘッダー非表示*/
+  header{
+    display: none;
+  }
+
+  /*ハンバーガーメニュー*/
+  /* ハンバーガーのマーク */
+  .nav{
+    width:100%;
+    position:relative;
+  }
+  .nav_toggle {
+    display: block;
+    position:absolute;
+    top:5%;
+    left:85%;
+    width: 8rem;
+    height: 6rem;
+    z-index: 100;
+  }
+  .nav_toggle i {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(53, 50, 50);
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  .nav_toggle i:nth-child(1) {
+    top: 0;
+  }
+  .nav_toggle i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .nav_toggle i:nth-child(3) {
+    bottom: 0;
+  }
+  
+
+  /* クリックされた後のハンバーガーのマーク */
+  .nav_toggle.show i:nth-child(1) {
+    transform: translateY(5px) rotate(-45deg);
+  }
+  .nav_toggle.show i:nth-child(2) {
+    opacity: 0;
+  }
+  .nav_toggle.show i:nth-child(3) {
+    transform: translateY(-20px) rotate(45deg);
+  }
+
+  /* クリックで表示されるメニュー：クリックされる前 */
+  .nav {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    background-color: rgb(255, 255, 255,1);
+    z-index: 10;
+    height:100vh;
+  }
+  .nav_menu_li {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .nav_menu_li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 4rem;
+  }
+
+  /* クリックで表示されるメニュー：クリックされた後 */
+  .nav.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
   /*トップページ*/
   .top{
     padding-left:0;
   }
+  .br-sp{
+    display:block;
+  }
+  .br-both{
+    display:block;
+  }
+  .firstview_main_image{
+    position:absolute;
+    width:72%;
+    top:20%;
+    left:28%;
+  }
+  .top h1{
+    left:7%;
+  }
+  .top p{
+    font-size: 2.6rem;
+    left:6%;
+    top:50%;
+  }
+  .four_triangle_image_1{
+    position:absolute;
+    width:32%;
+    top:40%;
+    left:42%;
+  }
+  .four_triangle_image_2{
+    position:absolute;
+    width:32%;
+    top:45%;
+    left:22%;
+  }
 
+  /*aboutのセクション*/
+  .about{
+    background-color: #ffffff;
+    height:100vh;
+  }
+  .profile{
+    height:100%;
+    margin-top: 5%;
+    display: block;
+    margin:0 auto;
+    
+    position:relative;
+  }
+  .profile_text{
+    width:90%;
+    height:90%;
+    margin:0 auto;
+   
+    
+   
+  }
+  .profile_text h2{
+    width:58%;
+    font-size: 4rem;
+    font-weight: bold;
+    margin:0 auto;
+    border-bottom: solid 0.3rem #000000;
+    border-top: solid 0.3rem #000000;
+    letter-spacing:0.1em;
+    
+  }
+  .profile_text p{
+    font-size:2.8rem;
+    position:absolute;
+    padding-left:4%;
+    line-height:2.6;
+    width:80%;
+    top:50%; 
+    
+    }
+  
+  .fadein img{
+    width: 130%;
+    position:absolute;
+    left:16%;
+    top:-86%;
+    }
 
+  .fadein p{
+    font-size: 6rem;
+    font-weight: bold;
+    color: #DB2B1A;
+    position:absolute;
+    z-index:7;
+    text-align: center;
+    left:50%;
+    top:-66%;
+  }
+    /*スクロールでフワっと表示*/
+  .fadein{
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 1s;
+  }
     /*TEDxTalkのセクション*/
   .tedxtalk{
-  padding-top:10%;
-  padding-bottom: 10%;
-  height: 100vh;
-  background-color:#fffef9;
-  display:block;
-}
+    padding-top:10%;
+    padding-bottom: 10%;
+    height: 100vh;
+    padding-left:3%;
+    padding-right:3%;
+    background-color:#fffef9;
+    display:block;
+  }
   .tedxtalk_content{
     width:90%;
     margin:0 auto;
-    margin-top: 20%;
+    margin-top: 5%;
   }
   .tedxtalk_content h2{
     width:60%;
@@ -463,39 +664,185 @@ footer{
   }
   .tedxtalk_content p{
     width:76%;
-    font-size: 2.6rem;
-
+    font-size: 2.8rem;
+    text-align: center;
   }
 
   .targets{
-    width:88%;
+    width:90%;
     margin:0 auto;
-    display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    
+   
+    
     
   }
-  .target{
-    width:28%;
-    height: 60%;
-    border: 0.3rem solid #DB2B1A;
-    text-align:center;
-    overflow: hidden;
-    
-  }
-  .target p{
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom:5%;
-  }
-  .target img{
-    object-fit: cover;
-    width: 90%;
-    height:60%;
+  .target_1,.target_2,.target_3{
+    width:40%;
+    height: 100%;
+    margin-top:5%;
+
   }
   
-  /*eventのセクション*/
-  /*楽しみ方のセクション*/
+  .target_1 p,.target_2 p,.target_3 p{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom:3%;
+  }
+  
 
+  
+  
+  
+  /*eventのセクション*/
+  .event {
+    height:100vh;
+    position: relative;
+  }
+  .event h2{
+    margin-top:6%;
+    width:60%;
+    
+  }
+  .event_video{
+    display: block !important;;
+    margin-left:0;
+    margin-right:0;
+    margin:0 auto;
+  }
+  .video_conetnt{
+    width:100%;
+    height:100%;
+    
+    margin:0 auto;
+    
+  }
+  .video_contents{
+    width:100%;
+    height:100%;
+    padding-left:20%;
+    padding-right: 20%;
+    position:relative;
+    margin:0 auto;
+    
+
+  }
+  .video_contents iframe{
+    width:100%;
+    height:auto;
+    aspect-ratio: 16/9;
+    position:absolute;
+    left:3%;
+    margin-top:36%;
+    text-align: left;
+    
+  }
+  .movie_decoration_1 img{
+    width:72%;
+    position:absolute;
+    left:76%;
+    padding-top:20%;
+   
+    z-index:-1;
+  }
+  .movie_decoration_2 img{
+    width:72%;
+    position:absolute;
+    padding-top:96%;
+   
+   
+    z-index:-1;
+  }
+  .event_contents{
+    margin:0 auto;
+    width:95%;
+    margin-left:0;
+    position:absolute;
+    top:50%;
+    margin-bottom:10%;
+  }
+  .event_content h3{
+    font-size: 3.4rem;
+    margin-bottom:0;
+    margin-top:0;
+  }
+  .event_content p{
+    font-size: 2.8rem;
+    width:80%;
+    margin:0 auto;
+    margin-top:2%;
+    margin-bottom:3%;
+    padding-right:3%;
+  }
+  .video_content{
+    text-align: center;
+  }
+ 
+  /*楽しみ方のセクション*/
+.howtoenjoy{
+  height:100vh;
+}
+.howtoenjoy h2{
+  width:60%;
+  margin-bottom:5%;
+  
+}
+.howtoenjoy_contents{
+  display: block;
+  margin:0 auto;
+  padding-top:10%;
+}
+.howtoenjoy_content{
+  width:90%;
+  margin:0 auto;
+
+}
+.howtoenjoy_content h3{
+  font-size: 3.4rem;
+  padding-bottom:3%;
+}
+.howtoenjoy_content p{
+  font-size: 2.8rem;
+  width:76%;
+}
+.howto_image{
+  flex-direction:column-reverse;
+  float:left;
+  
+}
+.howtoenjoy_content img{
+  object-fit: contain;
+  width:48%;
+  height: 60%;
+  margin-top: 10%;
+  float:left;
+  
+}
+/*ボタンのホバー*/
+.btn_flat{
+  
+  display:inline-block;
+  width:36%;
+  padding:2rem 2rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color:#ff7950;
+  border: solid 0.3rem #ff7950;
+  border-radius: 1rem;
+  transition: .4s;
+  margin-top:20%;
+  margin-bottom: 10%;
+}
+.btn_flat:hover{
+  background:#ff7950;
+  color:#ffffff;
+}
+/*footer*/
+footer{
+  height:10vh;
+  line-height: 10vh;
+}
 }
 
 
