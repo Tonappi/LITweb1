@@ -626,7 +626,7 @@ footer{
     width: 130%;
     position:absolute;
     left:16%;
-    top:-86%;
+    top:-100%;
     }
 
   .fadein p{
@@ -637,7 +637,7 @@ footer{
     z-index:7;
     text-align: center;
     left:50%;
-    top:-66%;
+    top:-80%;
   }
     /*スクロールでフワっと表示*/
   .fadein{
@@ -673,7 +673,7 @@ footer{
   .targets{
     width:85%;
     flex-wrap: wrap;
-   align-content: stretch;
+    align-content: stretch;
     row-gap:20px;
     
     
