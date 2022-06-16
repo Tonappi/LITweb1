@@ -493,16 +493,20 @@ footer{
   /* ハンバーガーのマーク */
   .nav{
     width:100%;
-    position:relative;
+    position:fixed;
+    height: 50px;
+   
+    
   }
   .nav_toggle {
     display: block;
-    position:absolute;
+    position:fixed;
     top:5%;
     left:80%;
     width: 4rem;
     height: 3rem;
     z-index: 100;
+   
   }
   .nav_toggle i {
     display: block;
