@@ -153,6 +153,7 @@ ul a:hover::after {
   
 }
 .profile_text h2{
+  display: block;
   width:55%;
   font-size: 4rem;
   font-weight: bold;
@@ -610,7 +611,7 @@ footer{
   /*aboutのセクション*/
   .about{
     background-color: #ffffff;
-    height:120vh;
+    height:681px;
   }
   .about h2 {
     width:60%;
@@ -666,8 +667,8 @@ footer{
     /*スクロールでフワっと表示*/
   .fadein{
     opacity: 0;
-    transform: translateY(5px);
-    transition: all 1s;
+    transform: translateY(20px);
+    transition: all 4s;
     margin:0 auto;
     position: relative;
     margin-top:20%;
@@ -678,7 +679,7 @@ footer{
   .tedxtalk{
     padding-top:10%;
     padding-bottom: 10%;
-    height: 120vh;
+    height: 681px;
     padding-left:3%;
     padding-right:3%;
     background-color:#fffef9;
@@ -727,7 +728,7 @@ footer{
   
   /*eventのセクション*/
   .event {
-    height:120vh;
+    height:681px;
     position: relative;
   }
   .event h2{
@@ -740,11 +741,13 @@ footer{
     margin-left:0;
     margin-right:0;
     margin:0 auto;
+    margin-top:10%;
+    
   }
   .video_conetnt{
     width:100%;
     height:100%;
-    
+    padding-top:0%;
     margin:0 auto;
     
   }
@@ -755,6 +758,7 @@ footer{
     padding-right: 20%;
     position:relative;
     margin:0 auto;
+    
     
 
   }
@@ -814,7 +818,7 @@ footer{
  
   /*楽しみ方のセクション*/
 .howtoenjoy{
-  height:120vh;
+  height:681px;
 }
 .howtoenjoy h2{
   width:60%;
@@ -822,7 +826,7 @@ footer{
   
 }
 .howtoenjoy_contents{
-  display: block;
+  display:block;
   margin:0 auto;
   padding-top:10%;
 }
