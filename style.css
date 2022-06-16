@@ -501,8 +501,8 @@ footer{
   .nav_toggle {
     display: block;
     position:fixed;
-    top:5%;
-    left:80%;
+    top:3%;
+    left:84%;
     width: 4rem;
     height: 3rem;
     z-index: 100;
