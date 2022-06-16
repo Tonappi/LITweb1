@@ -578,7 +578,7 @@ footer{
   /*トップページ*/
   .top{
     padding-left:0;
-    height:700px;
+    height:100vh;
   }
   .br-sp{
     display:block;
