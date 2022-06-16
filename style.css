@@ -574,6 +574,7 @@ footer{
   /*トップページ*/
   .top{
     padding-left:0;
+    height:600px;
   }
   .br-sp{
     display:block;
@@ -644,24 +645,24 @@ footer{
     position:absolute;
     padding-left:4%;
     width:80%;
-    top:55%; 
+    top:54%; 
   }
   
   .fadein img{
-    width: 130%;
+    width: 146%;
     position:absolute;
-    left:-16%;
-    top:-5%;
+    left:-24%;
+    top:-26%;
     }
 
   .fadein p{
-    font-size: 6rem;
+    font-size: 7.4rem;
     font-weight: bold;
     color: #DB2B1A;
     z-index:7;
     position: absolute;
-    left:15%;
-    top:35%;
+    left:11%;
+    top:20%;
    
   }
     /*スクロールでフワっと表示*/
@@ -692,12 +693,15 @@ footer{
   }
   .tedxtalk_content h2{
     width:60%;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
   }
   .tedxtalk_content p{
     width:76%;
     font-size: 2.8rem;
-    text-align: center;
+    
+  }
+  .slash{
+    font-size: 4rem;
   }
 
   .targets{
@@ -712,7 +716,7 @@ footer{
   .target_1,.target_2,.target_3{
     width:46%;
     height: 100%;
-    margin-top:5%;
+    margin-top:3%;
    
   }
   
@@ -741,7 +745,7 @@ footer{
     margin-left:0;
     margin-right:0;
     margin:0 auto;
-    margin-top:10%;
+    margin-top:3%;
     
   }
   .video_conetnt{
@@ -828,7 +832,7 @@ footer{
 .howtoenjoy_contents{
   display:block;
   margin:0 auto;
-  padding-top:10%;
+  padding-top:2%;
 }
 .howtoenjoy_content{
   width:90%;
@@ -870,7 +874,7 @@ footer{
   border: solid 0.3rem #ff7950;
   border-radius: 1rem;
   transition: .4s;
-  margin-top:20%;
+  margin-top:15%;
   margin-bottom: 10%;
 }
 .btn_flat:hover{
